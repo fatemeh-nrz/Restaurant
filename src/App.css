@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+* {
+  /* background-color: #323334; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  color: white;
   min-height: 100vh;
+  background-color: #323334;
+}
+.mainContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.topContainer {
   display: flex;
-  flex-direction: column;
+  min-height: 140px;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 16px;
+}
+.logo img {
+  width: 300px;
+  height: 130px;
+}
+.search input {
+  background-color: transparent;
+  border: 1px solid red;
+  color: white;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 16px;
+  padding: 0 10px;
+}
+.search input::placeholder{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding-bottom: 20px;
 }
+button {
+  background-color: #ff4343;
+  border-radius: 5px;
+  padding: 6px 12px;
+  border: none;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #430505;
+}
+.foodCards {
+  background-image: url("./asses/img/romantic-fancy-restaurant-table-setting-fqob172ovcc7qq57.webp");
+  min-height: calc(100vh - 220px);
+  /* width:1100px ; */
+  background-size: cover;
+  position: relative;
+}
+.foodCards {
+  /* border:  1px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.foodCard {
+  width: 340px;
+  height: 167px;
+  margin: 10px;
+  border: 2px solid rgba(247, 247, 247, 0.2);
+  border-radius: 20px;
+  background-color: rgba(59, 59, 59, 0.6);
+  padding: 8px;
+  display: flex;
+}
+.food_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+.food_info h3 {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.food_info p {
+  margin-top: 4px;
+  font-size: 12px;
+}
+@media (0 < width < 600px) {
+  .topContainer  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+   
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
